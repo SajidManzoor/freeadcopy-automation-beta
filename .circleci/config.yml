@@ -7,7 +7,7 @@ workflows:
   build:
     triggers:
       - schedule:
-          cron: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *"
+          cron: "* * * * *"
           filters:
             branches:
               only:
@@ -23,6 +23,19 @@ workflows:
           # https://docs.cypress.io/guides/continuous-integration/introduction#Boot-your-server
           # start-command: 'npm start'
           cypress-command: "npx cypress run"
+
+# workflows:
+#    nightly:
+#      triggers:
+#        - schedule:
+#            cron: "0 0 * * *"
+#            filters:
+#              branches:
+#                only:
+#                  - main
+#                  - beta
+#      jobs:
+#        - test
   # nightly:
   #   triggers:
   #     - schedule:
