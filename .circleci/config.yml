@@ -5,13 +5,13 @@ orbs:
   cypress: cypress-io/cypress@3
 workflows:
   build:
-    triggers:
-      - schedule:
-          cron: "* * * * *"
-          filters:
-            branches:
-              only:
-                - main
+    # triggers:
+    #   - schedule:
+    #       cron: "* * * * *"
+    #       filters:
+    #         branches:
+    #           only:
+    #             - main
     jobs:
       - cypress/run:
           # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
@@ -24,18 +24,6 @@ workflows:
           # start-command: 'npm start'
           cypress-command: "npx cypress run"
 
-# workflows:
-#    nightly:
-#      triggers:
-#        - schedule:
-#            cron: "0 0 * * *"
-#            filters:
-#              branches:
-#                only:
-#                  - main
-#                  - beta
-#      jobs:
-#        - test
   # nightly:
   #   triggers:
   #     - schedule:
