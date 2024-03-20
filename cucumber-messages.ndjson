@@ -115,3 +115,4 @@
 {"testStepStarted":{"testStepId":"5f5caa0e-508b-4bb3-949f-a0c34cf1c4bd","testCaseStartedId":"e46e7000-2a09-492d-b929-88dd761e87ca","timestamp":{"seconds":1710933897,"nanos":374000000}}}
 {"testStepFinished":{"testStepId":"5f5caa0e-508b-4bb3-949f-a0c34cf1c4bd","testCaseStartedId":"e46e7000-2a09-492d-b929-88dd761e87ca","testStepResult":{"status":"PASSED","duration":{"seconds":0,"nanos":459000000}},"timestamp":{"seconds":1710933897,"nanos":833000000}}}
 {"testCaseFinished":{"testCaseStartedId":"e46e7000-2a09-492d-b929-88dd761e87ca","timestamp":{"seconds":1710933897,"nanos":917000000},"willBeRetried":false}}
+{"testRunFinished":{"timestamp":{"seconds":1710934362,"nanos":459000000}}}
