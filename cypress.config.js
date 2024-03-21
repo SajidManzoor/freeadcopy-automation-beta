@@ -18,7 +18,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 30000,
   reporter: "cypress-mochawesome-reporter",
   e2e: {
-    baseUrl: 'https://freeadcopy.com/',
+    baseUrl: 'https://beta.freeadcopy.com/',
     setupNodeEvents,
     // setupNodeEvents(on,config){
     //   require('cypress-mochawesome-reporter/plugin')(on)
