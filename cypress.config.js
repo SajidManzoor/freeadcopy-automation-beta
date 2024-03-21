@@ -35,11 +35,11 @@ module.exports = defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
     watchForFileChanges: false,
     experimentalRunAllSpecs: true,
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-      require("cypress-mochawesome-reporter/plugin")(on);
-      // allureWriter(on, config);
-      return config;
-    },
+    // setupNodeEvents(on, config) {
+    //   // implement node event listeners here
+    //   require("cypress-mochawesome-reporter/plugin")(on);
+    //   // allureWriter(on, config);
+    //   return config;
+    // },
   },
 });
