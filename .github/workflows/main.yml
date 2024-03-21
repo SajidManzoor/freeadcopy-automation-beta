@@ -25,7 +25,7 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_USERNAME: joanmedia
+          SLACK_USERNAME: sajid
           SLACK_TITLE: Regression Test
           SLACK_MESSAGE: "New changes :rocket:"
           SLACK_COLOR: ${{ job.status }}
