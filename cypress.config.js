@@ -17,16 +17,18 @@ module.exports = defineConfig({
   projectId: "rizcte",
   defaultCommandTimeout: 30000,
   reporter: "cypress-mochawesome-reporter",
-  reporterOptions: {
-    charts: true,
-    reportPageTitle: "custom-title",
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
-  },
+  // reporterOptions: {
+  //   charts: true,
+  //   reportPageTitle: "custom-title",
+  //   embeddedScreenshots: true,
+  //   inlineAssets: true,
+  //   saveAllAttempts: false,
+  // },
   e2e: {
     baseUrl: 'https://freeadcopy.com/',
-    setupNodeEvents,
+    setupNodeEvents(on,config){
+      require('cypress-mochawesome-reporter/plugin')(on)
+    },
     experimentalRunAllSpecs: true,
     //specPattern: 'cypress/Integration/*.js'
     specPattern: 'cypress/Integration/FeatureFiles/*.feature',
