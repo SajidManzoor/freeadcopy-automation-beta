@@ -6,7 +6,7 @@ const { preprocessor, } = require("@badeball/cypress-cucumber-preprocessor/brows
 async function setupNodeEvents(on, config) {
   // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
   await addCucumberPreprocessorPlugin(on, config);
-
+  await require('cypress-mochawesome-reporter/plugin')(on)
   on("file:preprocessor", preprocessor(config));
 
   // Make sure to return the config object as it might have been modified by the plugin.
@@ -17,18 +17,12 @@ module.exports = defineConfig({
   projectId: "rizcte",
   defaultCommandTimeout: 30000,
   reporter: "cypress-mochawesome-reporter",
-  // reporterOptions: {
-  //   charts: true,
-  //   reportPageTitle: "custom-title",
-  //   embeddedScreenshots: true,
-  //   inlineAssets: true,
-  //   saveAllAttempts: false,
-  // },
   e2e: {
     baseUrl: 'https://freeadcopy.com/',
-    setupNodeEvents(on,config){
-      require('cypress-mochawesome-reporter/plugin')(on)
-    },
+    setupNodeEvents,
+    // setupNodeEvents(on,config){
+    //   require('cypress-mochawesome-reporter/plugin')(on)
+    // },
     experimentalRunAllSpecs: true,
     //specPattern: 'cypress/Integration/*.js'
     specPattern: 'cypress/Integration/FeatureFiles/*.feature',
