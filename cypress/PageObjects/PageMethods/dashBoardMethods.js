@@ -136,7 +136,7 @@ export default class dashBoardMethods {
     }
     selectVideo() {
         dashBoardElement.element.freeVideo().click()
-        cy.url().should('include', '/course')
+        cy.url().should('include', '/training')
         // cy.wait(10000)
         cy.reload()
         cy.get('video')
@@ -154,7 +154,7 @@ export default class dashBoardMethods {
             .should('have.prop', 'paused', false)
             .and('have.prop', 'ended', false)
     }
-    clickSearchTemplate() {
+    searchTemplate() {
         dashBoardElement.element.search_bar().click()
 
     }

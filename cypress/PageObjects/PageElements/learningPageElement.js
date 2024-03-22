@@ -5,7 +5,8 @@ export default class learningPageElements {
         unlockBtn: () => cy.get('.my-10>.bg-indigo-500'),
         videoTitle: () => cy.get('.grid>.relative:nth-child(1)>.relative>.flex> p'),
         addFavoriteBtn: () => cy.get('.my-10>.border:nth-child(2)'),
-        favouriteIcon: () => cy.get('.mt-4 > path'),
+        // favouriteIcon: () => cy.get('.mt-4 > path'),
+        favouriteIcon: () => cy.get('button').contains('Favorites'),
         videoList: () => cy.get('.justify-start')
     }
 

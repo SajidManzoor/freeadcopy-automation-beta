@@ -6,7 +6,7 @@ export default class dashBoardElements {
         myAds_option: () => cy.get('.space-y-4>.flex-1 > a:nth-child(7)'),
         template_category: () => cy.get('.mt-8 > div:nth-child(2)'),
         template_fb: () => cy.get('.mt-5 > .grid > div:nth-child(2)'),
-        ad_content: () => cy.get('#ads > :nth-child(3)',{timeout:180000}),
+        ad_content: () => cy.get('#ads > :nth-child(3)', { timeout: 180000 }),
         ad_select: () => cy.get('.rt-TableBody > tr:nth-child(2)'),
         edit_icon: () => cy.get('[src="/icons/dashboard/adsResult/light/edit.svg"]'),
         save_btn: () => cy.get('.flex>.border:nth-child(3)'),
@@ -18,13 +18,14 @@ export default class dashBoardElements {
         reportSubmit_btn: () => cy.get('.py-3'),
         learning_Tab: () => cy.get('.space-y-4>.flex-1 > a:nth-child(9)'),
         freeVideo: () => cy.get('.pb-20>.mt-5:nth-child(3)>.w-full>.relative:nth-child(1)'),
+        freeVideo: () => cy.get('.pb-20 > div:nth-of-type(4) div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3)'),
         playVideo: () => cy.get('.h-\[40vh\] > [data-media-provider=""] > video'),
         search_bar: () => cy.get('.ml-5 > .relative > .bg-gray-50'),
         searchField: () => cy.get('#simple-search'),
         purchases_Tab: () => cy.get('.space-y-4>.flex-1 > a:nth-child(9)'),
 
-        
-        email_category: () => cy.get('.grid > .mt-4:nth-child(1)').contains('Email Copy'),        
+
+        email_category: () => cy.get('.grid > .mt-4:nth-child(1)').contains('Email Copy'),
         emailSequence: () => cy.get(':nth-child(4) > :nth-child(1) > .rotating-card-container'),
         emailTemplate: () => cy.get(':nth-child(1) > .rotating-card-container'),
         template: () => cy.get('#template>.grid>.block>.rotating-card-container>.p-5>.px-4>.text-xl'),
@@ -36,7 +37,7 @@ export default class dashBoardElements {
         marketTemplate: () => cy.get('.grid > .mt-4:nth-child(1)'),
         misc_category: () => cy.get('.pb-7 > div:nth-of-type(5) .back > .text-xl').contains('Misc'),
         bredcrumb_Misc: () => cy.get(':nth-child(3) > .text-md').contains('misc'),
-        miscTemplate: () => cy.get('.grid > .mt-4:nth-child(1)'),        
+        miscTemplate: () => cy.get('.grid > .mt-4:nth-child(1)'),
         advertorial_category: () => cy.get(':nth-child(6) > .rotating-card-container').contains('Advertorial'),
         bredcrumb_Advert: () => cy.get(':nth-child(3) > .text-md').contains('advertorial ads'),
         advertorialTemplate: () => cy.get('.grid > .mt-4:nth-child(1)'),
@@ -45,9 +46,9 @@ export default class dashBoardElements {
         newestTemplate: () => cy.get('#template > .grid > :nth-child(1)'),
         credits_text: () => cy.get('.flex-1 > :nth-child(5)'),
         buyCredits_btn: () => cy.get('.flex-end > .text-white'),
-        newest : ()=> cy.get('#template > .grid .rotating-card-container'),
-        newest_template : (i)=> cy.get('#template > .grid > :nth-child('+i+') > .rotating-card-container'),
-        
+        newest: () => cy.get('#template > .grid .rotating-card-container'),
+        newest_template: (i) => cy.get('#template > .grid > :nth-child(' + i + ') > .rotating-card-container'),
+
     }
 
 }

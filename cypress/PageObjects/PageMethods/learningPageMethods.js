@@ -49,7 +49,7 @@ export default class learningPageMethods {
                             .click()
 
                         cy.url()
-                            .should('include', '/course')
+                            .should('include', '/training')
                         learningElement.element.favouriteIcon().click()
                         utils.verifyToastMessage('Removed From Favorites')
 

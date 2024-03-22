@@ -89,12 +89,13 @@ When(/^Login to the app and Click on the template from side bar$/, function () {
 When(/^click on Market Research category and select template$/, function() {
 	dashboard.selectMarketResCategory()
 	dashboard.selectMarketResTemplate()
+});
+
+When(/^Fill the input fields.$/, function() {
 	adsPage.fillAdsFormMarketRes(
 		this.regData[0].FieldTargetMarket,
 		this.regData[0].FieldUniqueSol)
-
 });
-
 
 Then(/^Click on the Generate Ad button and verify the ad$/, () => {
 	adsPage.selectGenerateAdBtn()

@@ -4,7 +4,7 @@ export default class settingsPageElements {
         userName_Field: () => cy.get('#text'),
         updateSettings_Button: () => cy.get('.text-gray-500 > .text-white > .flex'),
         update_Toast: () => cy.get('.Toastify__toast-body > :nth-child(2)'),
-        passwordSetting_Tab: () => cy.get('.border-b > .flex > :nth-child(4)'),
+        passwordSetting_Tab: () => cy.get('.border-b > .flex > p').contains('Password'),
         password_Field: () => cy.get('#password'),
         newPassword_Field: () => cy.get('#newPassword'),
         confirmPassword_Field: () => cy.get('#confirmpassword'),

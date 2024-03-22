@@ -24,7 +24,7 @@ Feature: Ad Generation process
   Scenario: User is able to generate ad with "Market Research" template
     When Login to the app and Click on the template from side bar
     And click on Market Research category and select template
-    And Fill the fields
+    And Fill the input fields.
     Then Click on the Generate Ad button and verify the ad
 
 
