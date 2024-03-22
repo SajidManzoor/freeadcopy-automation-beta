@@ -30,5 +30,6 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: sajid
-          SLACK_TITLE: Regression Test
+          SLACK_TITLE: Build Status ${{ job.status }}
           SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: Beta Environment
